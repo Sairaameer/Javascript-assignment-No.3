@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <!--Q1.Write a program that takes two user inputs for first and
+last name using prompt and merge them in a new variable
+titled fullName. Greet the user using his full name.-->
+<script>
+
+    //Prompt the user for their first name
+    var firstName = prompt("Enter your first name");
+    
+    // Prompt the user for their last name
+    var lastName = prompt("Enter your last name");
+    
+    // Merge the first and last names into fullName
+    var fullName = firstName +" " + lastName;
+    
+    // Greet the user using their full name
+    alert("Hello,"+" " + fullName);
+    
+    </script>
+    <!--Q2. Write a program to take a user input about his favorite
+    mobile phone model. Find and display the length of user
+    input in your browser-->
+    <script>
+    
+    // Prompt the user for their favorite mobile phone model
+    var favouritePhoneModel = prompt("Enter your favorite mobile phone model:");
+    
+    // Find the length of the user input
+    var inputLength = favouritePhoneModel.length;
+    
+    // Display the length of user input in the browser
+    console.log("My favorite phone is: Samsung Galaxy S6 Edge Plus Length of string:" + inputLength);
+    
+    
+    </script>
+     <!--Q3. Write a program to find the index of letter “n” in the word
+    “Pakistani” and display the result in your browser--> 
+    
+      <script>
+    //Define the word
+    var word = "Pakistan";
+    
+    // Find the index of letter 'n'
+    var indexOfN = word.indexOf("n");
+    
+    // Display the result in the browser
+    console.log("String: Pakistani \n Index of 'n':"+ " "+ indexOfN);
+    
+     </script>
+     <!--Q4. Write a program to find the last index of letter “l” in the
+    // word “Hello World” and display the result in your browser.-->
+    <script>
+    
+    //Define the phrace
+    var phrace = "Hello world";
+    
+    //Find the last index of letter "l"
+    var lastIndexOfL = phrace.lastIndexOf("l");
+    
+    //Display the result in the browser
+    console.log("String: Hello World \n Last index of 'l':" + " "+ lastIndexOfL);
+    
+    </script>
+     <!--Q5. Write a program to find the character at 3rd index in the
+    word “Pakistani” and display the result in your browser.-->  
+    
+    <script>
+    //Define the word
+    var word = "Pakistani"
+    
+    //Find the 3rd index of in the word "pakistani"
+    var indexOf3rdChar = word.charAt(3);
+    
+    //Display the result in the browser
+    console.log("String: Pakistani \n Character at index 3:" +" "+ indexOf3rdChar);
+    
+    </script>
+    <!--Q6. Repeat Q1 using string concat() method.-->
+    <script>
+    
+    var firstName = "Saira";
+    var lastName = "Ameer";
+    var fullName = firstName +" "+ lastName;
+    console.log(fullName);
+    
+    </script>
+    <!--Q7. Write a program to replace the “Hyder” to “Islam” in the
+    word “Hyderabad” and display the result in your browser.-->
+    <script>
+    //Define the word 
+    var originalWord = "Hyderabad";
+    
+    //Replace the "Hyder" to "Islam" in the word "Hyderabad"
+    var modifiedeWord = originalWord.replace("Hyder", "Islam");
+    
+    console.log("City: HyderAbad \nAfter replacement:"+" "+modifiedeWord);
+    
+    </script>
+    <!--Q8. Write a program to replace all occurrences of “and” in the
+    string with “&” and display the result in your browser.
+    var message = “Ali and Sami are best friends. They play cricket and
+    football together.”;-->
+    
+    <script>
+    //Define message
+    var message = "Ali and Sami are best friends. They play cricket and football together.";
+    
+    // replace all occurrences of “and” in the string with “&” 
+    var replaceOccurrences= message.replace(/and/g, "&");
+    
+    //display the result in your browser.
+    console.log(replaceOccurrences);
+            
+    </script>
+    <!--Q9. Write a program that converts a string “472” to a number
+    472. Display the values & types in your browser.-->
+    <script>
+    
+    //Convert the string to a number
+    var str = "472";
+    var num = Number(str);
+    
+    // Display the values and their types
+    console.log("Value: " + str + "\n Type: " + typeof str) ;
+    console.log("Value: " + num + "\n Type: " + typeof num);
+    
+    
+    </script>
+    <!--Q10. Write a program that takes user input. Convert and
+    show the input in capital letters.-->
+    <script>
+    
+    //Write a program that takes user input
+    var userInput = prompt("Enter your favourite fruit");
+    
+    // Convert and show the input in capital letters
+    var upperCase = userInput.toUpperCase();
+    
+    //Display in browser
+    console.log("User input:"+" "+ userInput +"\nUpper case:"+" "+ upperCase);
+    
+    </script>
+    
+    <!--Q11. Write a program that takes user input. Convert and
+    show the input in title case.-->
+    <script>
+    
+    //Takes user input
+    var input = prompt("Enter your text:");
+    
+    // Convert and show the input in title case.
+    var words = input.toLowerCase().split(" ");
+    
+    for (var i = 0; i < words.length; i++) {
+      words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+    }
+    var titleCased = words.join(" ");
+    console.log("User input:"+ input +"\nTitle case:" + words);
+    
+    
+    </script>
+    <!--Q12. Write a program that converts the variable num to
+    string.
+    var num = 35.36 ;
+    Remove the dot to display “3536” display in your browser.-->
+    <script>
+    
+    //Take a variable 
+    var num = 35.36;
+    
+    //Convert number to string
+    var str = num.toString();
+    
+    // Remove the dot
+    var result = str.replace('.', ''); 
+    
+    // Display the result in the browser
+    console.log("Number:"+ num +"\n Result:",result);
+    
+    </script>
+    
+    <!--Q13. Write a program to take user input and store username
+    in a variable. If the username contains any special symbol
+    among [@ . , !], prompt the user to enter a valid username.
+    For character codes of [@ .
+    
+    Note:
+    ASCII code of ! is 33
+    ASCII code of , is 44
+    ASCII code of . is 46
+    
+    ASCII code of @ is 64-->
+     <script>
+    
+    var username = prompt("Enter your username:");
+    var containsSpecialChar = false;
+    var specialChars = [33, 44, 46, 64]; // ASCII codes for !, ,, ., @
+    
+    for (var i = 0; i < username.length; i++) {
+        var charCode = username.charCodeAt(i);
+        if (specialChars.includes(charCode)) {
+            containsSpecialChar = true;
+            break;
+        }
+    }
+    
+    if (containsSpecialChar) {
+        alert("Invalid username. Please enter a valid username without special characters [@, ., ,, !].");
+    } else {
+        alert("Username is valid.");
+    }
+    
+    </script>
+    <!--Q14. You have an array
+     A = [cake”, “apple pie”, “cookie”, “chips”, “patties”]
+     Write a program to enable “search by user input” in an array.
+     After searching, prompt the user whether the given
+     item is found in the list or not.
+     Note: Perform case insensitive search. Whether the user
+     enters cookie, Cookie, COOKIE or coOkIE, program
+     should inform about its availability. Example:-->
+    <script>
+    
+    var A = ["cake", "apple pie", "cookie", "chips", "patties"];
+    var userInput = prompt("Enter the item you want to search:").toLowerCase();
+    var lowerCaseArray = A.map(function(item) {
+        return item.toLowerCase();
+    });
+    
+    var itemIndex = lowerCaseArray.indexOf(userInput);
+    
+    if (itemIndex !== -1) {
+        alert(userInput + " is available at index"+ " "+itemIndex +" " +"in our bakery");
+    } else {
+        alert(userInput + " we are sorry."+" "+itemIndex +" "+ "is not available in our bakery.");
+    }
+    
+    </script>
+    <!--15. Write a program to take password as an input from
+    user. The password must qualify these requirements:
+    a. It should contain alphabets and numbers
+    b. It should not start with a number
+    c. It must at least 6 characters long
+    If the password does not meet above requirements,
+    prompt the user to enter a valid password.
+    For character codes of a-z, A-Z & 0-9, refer to ASCII
+    table at the end of this document.-->
+    <script>
+        
+     var valid = false;
+      while (!valid){
+       var password = prompt("Enter your password:");
+    
+    //Check if password is at least 6 characters long
+      if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        continue;
+      }
+    
+      // Check if the first character is a number
+      var firstCharCode = password.charCodeAt(0);
+      if (firstCharCode >= 48 && firstCharCode <= 57) {
+        alert("Password can not begin with a number.");
+        continue;
+      }
+    
+      //Check if password contains both alphabets and numbers
+      var hasAlphabet = false;
+      var hasNumber = false;
+    
+      for (var i = 0; i < password.length; i++) {
+        var charCode = password.charCodeAt(i);
+        if ((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122)) {
+          hasAlphabet = true;
+        } else if (charCode >= 48 && charCode <= 57) {
+          hasNumber = true;
+        }
+      }
+    
+      if (!hasAlphabet || !hasNumber) {
+        alert("Password must contain both alphabets and numbers.");
+        continue;
+      }
+    
+     //If all conditions are met
+      valid = true;
+    }
+    
+    // console.log("Valid password: " + password);
+    
+     </script>
+    
+<!--Q16. Write a program to convert the following string to an
+    array using string split method.
+    var university = “University of Karachi”;
+    Display the elements of array-->
+
+    <script>
+    //Take a variable in strings
+    var university = "univeresity of Karachi"; 
+    
+    //Convert the string to an array
+     var stringConToArray = university.split();
+    
+    //Result
+     console.log(stringConToArray);
+     var university = "University of Karachi";
+     var array = university.split(' ');
+     for (var i = 0; i < array.length; i++) {
+         console.log(array[i] + "\n");
+      
+     }
+    </script>
+    
+<!--Q17. Write a program to display the last character of a user
+    input. -->
+    
+    <script>
+    //Prompt the user for input
+    var userInput = prompt("Enter your input:");
+    
+    //Get the last character of the input
+    var lastCharacter = userInput[userInput.length - 1];
+    
+    //Display the last character
+    alert("The last character of your input is: " + lastCharacter);
+    console.log("userInput:"+userInput+ "\nLast character of input:" +lastCharacter);
+    
+     </script>
+    
+    <!-- Q18. You have a string “The quick brown fox jumps over the
+    lazy dog”. Write a program to count number of
+    occurrences of word “the” in given string -->
+    
+    <script>
+
+    //You have a string
+    var str = "The quick brown fox jumps over the lazy dog";
+    
+    //Convert the string to lowercase to make the search case-insensitive
+    var lowerStr = str.toLowerCase(); 
+    
+    //Split the string into an array of words
+    var words = lowerStr.split(' '); 
+    var count = 0;
+    
+    for (var i = 0; i < words.length; i++) 
+        if (words[i] === 'the') {
+            count++;
+    //     }
+    }
+    // Display the count in the console
+    console.log("Text: The quick brown fox jumps over the lazy dog\n There are "
+    +count+" occurrence(s) of word 'the' "); 
+    
+    </script>   
+
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATH METHODS</title>
+
+<!-- <h1>Coin Toss Result</h1>
+<p id="result"></p> -->
+
+</head>
+<body>
+    
+<!--Q1. Write a program that takes a positive integer from user &
+display the following in your browser.
+a. number
+b. round off value of the number
+c. floor value of the number
+d. ceil value of the number-->  
+<script>
+
+// Input the number
+var num = prompt("Enter a positive integer:");
+
+// Convert the input to a number
+num = Number(num);
+
+// Round off value
+var rounded = Math.round(num);
+
+// Floor value
+var floored = Math.floor(num);
+
+// Ceil value
+var ceiled = Math.ceil(num);
+
+//Display the values in your browser
+console.log("Number: " + num + "\n Round off value: " + rounded 
++ "\n Floor value: " + floored + "\n Ceil value: " + ceiled);
+
+</script>
+<!--Q2. Write a program that takes a negative floating point
+number from user & display the following in your browser.
+a. number
+b. round off value of the number
+c. floor value of the number
+d. ceil value of the number-->
+<script>
+
+//Prompt the user for a negative floating point number
+let number = prompt("Enter a negative floating point number:");
+
+// Convert the input to a floating point number
+number = parseFloat(number);
+
+// Get the rounded, floor, and ceil values
+let roundedNumber = Math.round(number);
+let floorNumber = Math.floor(number);
+let ceilNumber = Math.ceil(number);
+
+// Display the results
+
+console.log("Number: " + number);
+console.log("Round off value: " + roundedNumber);
+console.log("Floor value: " + floorNumber);
+console.log("Ceil value: " + ceilNumber);
+
+//Display the values in your browser
+console.log("Number:" + number + "\n Round off value:" + rounded
++ "\n Floor value: " + floored + "\n Ceil value: " + ceiled);
+
+</script>
+<!--Q3. Write a program that displays the absolute value of a
+number.
+E.g. absolute value of -4 is 4 & absolute value of 5 is 5-->
+<script>
+
+//Input a number
+var negativeNumber = -4;
+
+//Displays the absolute value of a number.
+var absNegative = Math.abs(negativeNumber); // 4
+
+// Disply the value in the browser
+console.log("The absulate value of -4 is "+absNegative); // Output: 4
+
+// </script>
+<!--Q4. Write a program that simulates a dice using random()
+// method of JS Math class. Display the value of dice in your
+browser.:-->
+<script>
+
+var randomNumber1 = Math.floor(Math.random() * 100) + 1;
+var randomNumber2 = Math.floor(Math.random() * 100) + 1;
+console.log("random dice value: "+randomNumber1);
+console.log("random dice value: "+randomNumber2);
+
+</script>
+<!--Q5. Write a program that simulates a coin toss using random()
+method of JS Math class. Display the value of coin in your
+browser-->
+<script>
+
+
+function coinToss(){
+//Generate a random number between 0 to 1
+   var randomNumber = Math.random();
+   
+//Determine the result based on the random number 
+var result = randomNumber < 0.5 ? "Heads" : "Tails";
+
+//Display the result in the browser
+document.getElementById("random coin value: "+"result").innerHTML = result;
+
+ }
+//call the function to perform the coin toss when the script runs
+coinToss();
+
+</script>
+<!--Q6. Write a program that shows a random number between 1
+and 100 in your browser.-->
+<script>
+
+var randomNumber = Math.floor(Math.random() * 100) + 1;
+document.write("random number between 1 and 100:" + randomNumber); 
+
+</script>
+<!--Q7. Write a program that asks the user about his weight. Parse
+the user input and display his weight in your browser.
+Possible user inputs can be:
+a. 50
+b. 50kgs
+c. 50.2kgs
+d. 50.2kilograms-->
+<script>
+
+//Ask the user for their weight
+var userWait = prompt("Enter your weight in kilograms");
+
+//parse the user input
+var weightsInKgs= parseFloat(userWait.replace("kgs", "").replace("kilograms", ""));
+
+// Display the user's weight in the browser
+console.log("The weight of user is" +" "+ weightsInKgs + " "+ "kilograms" );
+
+</script>
+<!--Q8. Write a program that stores a random secret number from
+1 to 10 in a variable. Ask the user to input a number
+between 1 and 10. If the user input equals the secret
+number, congratulate the user.-->
+<script>
+
+// Generate a random secret number between 1 and 10
+var secretNumber = Math.floor(Math.random() * 10) + 1;
+
+// Ask the user to input a number between 1 and 10
+var userInput = parseInt(prompt("Enter a number between 1 and 10:"));
+
+// Check if the user input equals the secret number
+if (userInput === secretNumber) {
+    alert("Congratulations! You guessed the correct number.");
+} else {
+    // alert("Try again! " + secretNumber+ ". ");
+    alert("Try again"+"\nPrevent this page from creating additional dialogs")
+}
+
+</script>
+
+</body>
+</html>
